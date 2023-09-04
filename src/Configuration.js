@@ -12,15 +12,24 @@
  * Licensed Under the GPLv3
  *******************************************/
 
-import Transloc3Parser from './Transloc3Parser';
+import BusTimeParser from './BusTimeParser';
 
 class Configuration {
     constructor() {
         this.center = [35.7740151,-78.6449387];
+        const bustime_key = 'b6ZhEjp3j5aRri8nWdtfQD23m';
         this.agencies = [
             {
                 name: 'Routes',
-                parser: new Transloc3Parser('20', 'https://raleigh.gotransitapp.com/api/no.php/3')
+                parser: new BusTimeParser('https://raleigh.gotransitapp.com/api/no.php',
+                                          bustime_key),
+                options: {
+                    parseNameFn: (n) => {
+                        // remove the beginning route number
+                        // from the name
+                        return n.replace(/^\w+\s+/, '');
+                    }
+                }
             }
         ];
     }
