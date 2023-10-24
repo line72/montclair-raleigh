@@ -18,6 +18,10 @@ class Configuration {
     constructor() {
         this.center = [35.7740151,-78.6449387];
         const bustime_key = 'b6ZhEjp3j5aRri8nWdtfQD23m';
+        this.tileserver = {
+            url: 'https://raleigh.gotransitapp.com/tiles/{z}/{x}/{y}.png',
+            subdomains: ''
+        };
         this.agencies = [
             {
                 name: 'Routes',

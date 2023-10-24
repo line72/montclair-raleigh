@@ -1,8 +1,20 @@
-1.10.1
+1.12.0
+1.11.3
+==========
+2023-10-23  Marcus Dillavou  <line72@line72.net>
+	* ISSUE-139 - Allow specifying tile server
+
+1.11.2
+==========
+2023-09-14  Marcus Dillavou  <line72@line72.net>
+	* ISSUE-136 - Add Support for Transitapp Api
+
+1.11.1
 ==========
 2023-09-03  Marcus Dillavou  <line72@line72.net>
-	* Backported ISSUE-127 - Fix CI
+	* ISSUE-127 - Fix CI
 
+1.11.0
 1.10.0
 1.9.2
 ==========
