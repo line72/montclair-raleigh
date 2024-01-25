@@ -31,7 +31,12 @@ class Configuration {
                     parseNameFn: (n) => {
                         // remove the beginning route number
                         // from the name
-                        return n.replace(/^\w+\s+/, '');
+                        //return n.replace(/^\w+\s+/, '');
+                        
+                        // !mwd - AS of 20240125 - We no longer
+                        //  need to do this, as Raleigh's provider
+                        //  has fixed it
+                        return n;
                     }
                 }
             }
